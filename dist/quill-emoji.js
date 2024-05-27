@@ -11571,8 +11571,6 @@ class ShortNameEmoji extends Module {
     }
     this.container.style.top = atSignBounds.top + atSignBounds.height + "px";
     this.quill.on('text-change', this.onTextChange);
-    //this.quill.once('selection-change', this.onSelectionChange);
-
     this.open = true;
     this.onOpen && this.onOpen();
   }
@@ -11945,93 +11943,93 @@ function module_toolbar_emoji_makeElement(tag, attrs) {
 
 
 
-const Delta = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default()["import"]('delta');
-const module_textarea_emoji_Module = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default()["import"]('core/module');
+const Delta = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default()["import"]("delta");
+const module_textarea_emoji_Module = external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default()["import"]("core/module");
 class TextAreaEmoji extends module_textarea_emoji_Module {
   constructor(quill, options) {
     super(quill, options);
     this.quill = quill;
-    this.container = document.createElement('div');
-    this.container.classList.add('textarea-emoji-control');
+    this.container = document.createElement("div");
+    this.container.classList.add("textarea-emoji-control");
     this.container.style.position = "absolute";
     this.container.innerHTML = options.buttonIcon;
     this.quill.container.appendChild(this.container);
-    this.container.addEventListener('click', this.checkEmojiBoxExist.bind(this), false);
+    this.container.addEventListener("click", this.checkEmojiBoxExist.bind(this), false);
   }
   checkEmojiBoxExist() {
     let elementExists = document.getElementById("textarea-emoji");
     if (elementExists) {
       elementExists.remove();
     } else {
-      let ele_emoji_area = document.createElement('div');
-      ele_emoji_area.id = 'textarea-emoji';
+      let ele_emoji_area = document.createElement("div");
+      ele_emoji_area.id = "textarea-emoji";
       this.quill.container.appendChild(ele_emoji_area);
-      let tabToolbar = document.createElement('div');
+      let tabToolbar = document.createElement("div");
       tabToolbar.id = "tab-toolbar";
       ele_emoji_area.appendChild(tabToolbar);
       var emojiType = [{
-        'type': 'p',
-        'name': 'people',
-        'content': '<div class="i-people"></div>'
+        type: "p",
+        name: "people",
+        content: '<div class="i-people"></div>'
       }, {
-        'type': 'n',
-        'name': 'nature',
-        'content': '<div class="i-nature"></div>'
+        type: "n",
+        name: "nature",
+        content: '<div class="i-nature"></div>'
       }, {
-        'type': 'd',
-        'name': 'food',
-        'content': '<div class="i-food"></div>'
+        type: "d",
+        name: "food",
+        content: '<div class="i-food"></div>'
       }, {
-        'type': 's',
-        'name': 'symbols',
-        'content': '<div class="i-symbols"></div>'
+        type: "s",
+        name: "symbols",
+        content: '<div class="i-symbols"></div>'
       }, {
-        'type': 'a',
-        'name': 'activity',
-        'content': '<div class="i-activity"></div>'
+        type: "a",
+        name: "activity",
+        content: '<div class="i-activity"></div>'
       }, {
-        'type': 't',
-        'name': 'travel',
-        'content': '<div class="i-travel"></div>'
+        type: "t",
+        name: "travel",
+        content: '<div class="i-travel"></div>'
       }, {
-        'type': 'o',
-        'name': 'objects',
-        'content': '<div class="i-objects"></div>'
+        type: "o",
+        name: "objects",
+        content: '<div class="i-objects"></div>'
       }, {
-        'type': 'f',
-        'name': 'flags',
-        'content': '<div class="i-flags"></div>'
+        type: "f",
+        name: "flags",
+        content: '<div class="i-flags"></div>'
       }];
-      let tabElementHolder = document.createElement('ul');
+      let tabElementHolder = document.createElement("ul");
       tabToolbar.appendChild(tabElementHolder);
-      if (document.getElementById('emoji-close-div') === null) {
-        let closeDiv = document.createElement('div');
-        closeDiv.id = 'emoji-close-div';
+      if (document.getElementById("emoji-close-div") === null) {
+        let closeDiv = document.createElement("div");
+        closeDiv.id = "emoji-close-div";
         closeDiv.addEventListener("click", module_textarea_emoji_fn_close, false);
-        document.getElementsByTagName('body')[0].appendChild(closeDiv);
+        document.getElementsByTagName("body")[0].appendChild(closeDiv);
       } else {
-        document.getElementById('emoji-close-div').style.display = "block";
+        document.getElementById("emoji-close-div").style.display = "block";
       }
-      let panel = document.createElement('div');
+      let panel = document.createElement("div");
       panel.id = "tab-panel";
       ele_emoji_area.appendChild(panel);
       let innerQuill = this.quill;
       emojiType.map(function (emojiType) {
-        let tabElement = document.createElement('li');
-        tabElement.classList.add('emoji-tab');
-        tabElement.classList.add('filter-' + emojiType.name);
+        let tabElement = document.createElement("li");
+        tabElement.classList.add("emoji-tab");
+        tabElement.classList.add("filter-" + emojiType.name);
         let tabValue = emojiType.content;
         tabElement.innerHTML = tabValue;
         tabElement.dataset.filter = emojiType.type;
         tabElementHolder.appendChild(tabElement);
-        let emojiFilter = document.querySelector('.filter-' + emojiType.name);
-        emojiFilter.addEventListener('click', function () {
+        let emojiFilter = document.querySelector(".filter-" + emojiType.name);
+        emojiFilter.addEventListener("click", function () {
           const emojiContainer = document.getElementById("textarea-emoji");
-          const tab = emojiContainer && emojiContainer.querySelector('.active');
+          const tab = emojiContainer && emojiContainer.querySelector(".active");
           if (tab) {
-            tab.classList.remove('active');
+            tab.classList.remove("active");
           }
-          emojiFilter.classList.toggle('active');
+          emojiFilter.classList.toggle("active");
           while (panel.firstChild) {
             panel.removeChild(panel.firstChild);
           }
@@ -12042,7 +12040,7 @@ class TextAreaEmoji extends module_textarea_emoji_Module {
       let windowHeight = window.innerHeight;
       let editorPos = this.quill.container.getBoundingClientRect().top;
       if (editorPos > windowHeight / 2) {
-        ele_emoji_area.style.top = '-250px';
+        ele_emoji_area.style.top = "-250px";
       }
       module_textarea_emoji_fn_emojiPanelInit(panel, this.quill);
     }
@@ -12052,8 +12050,8 @@ TextAreaEmoji.DEFAULTS = {
   buttonIcon: '<svg viewbox="0 0 18 18"><circle class="ql-fill" cx="7" cy="7" r="1"></circle><circle class="ql-fill" cx="11" cy="7" r="1"></circle><path class="ql-stroke" d="M7,10a2,2,0,0,0,4,0H7Z"></path><circle class="ql-stroke" cx="9" cy="9" r="6"></circle></svg>'
 };
 function module_textarea_emoji_fn_close() {
-  let ele_emoji_plate = document.getElementById('textarea-emoji');
-  document.getElementById('emoji-close-div').style.display = "none";
+  let ele_emoji_plate = document.getElementById("textarea-emoji");
+  document.getElementById("emoji-close-div").style.display = "none";
   if (ele_emoji_plate) {
     ele_emoji_plate.remove();
   }
@@ -12063,8 +12061,8 @@ function fn_updateRange(quill) {
   return range;
 }
 function module_textarea_emoji_fn_emojiPanelInit(panel, quill) {
-  module_textarea_emoji_fn_emojiElementsToPanel('p', panel, quill);
-  document.querySelector('.filter-people').classList.add('active');
+  module_textarea_emoji_fn_emojiElementsToPanel("p", panel, quill);
+  document.querySelector(".filter-people").classList.add("active");
 }
 function module_textarea_emoji_fn_emojiElementsToPanel(type, panel, quill) {
   let fuseOptions = {
@@ -12079,29 +12077,29 @@ function module_textarea_emoji_fn_emojiElementsToPanel(type, panel, quill) {
   };
   let fuse = new Fuse(emoji_list, fuseOptions);
   let result = fuse.search(type);
-  results = result.map(r => r.item).sort(function (a, b) {
+  let results = result.map(r => r.item).sort(function (a, b) {
     return a.emoji_order - b.emoji_order;
   });
   quill.focus();
   let range = fn_updateRange(quill);
-  result.map(function (emoji) {
-    let span = document.createElement('span');
+  results.map(function (emoji) {
+    let span = document.createElement("span");
     let t = document.createTextNode(emoji.shortname);
     span.appendChild(t);
-    span.classList.add('bem');
-    span.classList.add('bem-' + emoji.name);
-    span.classList.add('ap');
-    span.classList.add('ap-' + emoji.name);
-    let output = '' + emoji.code_decimal + '';
-    span.innerHTML = output + ' ';
+    span.classList.add("bem");
+    span.classList.add("bem-" + emoji.name);
+    span.classList.add("ap");
+    span.classList.add("ap-" + emoji.name);
+    let output = "" + emoji.code_decimal + "";
+    span.innerHTML = output + " ";
     panel.appendChild(span);
-    let customButton = document.querySelector('.bem-' + emoji.name);
+    let customButton = document.querySelector(".bem-" + emoji.name);
     if (customButton) {
-      customButton.addEventListener('click', function () {
+      customButton.addEventListener("click", function () {
         // quill.insertText(range.index, customButton.innerHTML);
         // quill.setSelection(range.index + customButton.innerHTML.length, 0);
         // range.index = range.index + customButton.innerHTML.length;
-        quill.insertEmbed(range.index, 'emoji', emoji, (external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default()).sources.USER);
+        quill.insertEmbed(range.index, "emoji", emoji, (external_commonjs_quill_commonjs2_quill_amd_quill_root_Quill_default()).sources.USER);
         setTimeout(() => quill.setSelection(range.index + 1), 0);
         module_textarea_emoji_fn_close();
       });
