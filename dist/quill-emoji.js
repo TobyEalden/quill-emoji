@@ -11571,8 +11571,6 @@ class ShortNameEmoji extends Module {
     }
     this.container.style.top = atSignBounds.top + atSignBounds.height + "px";
     this.quill.on('text-change', this.onTextChange);
-    //this.quill.once('selection-change', this.onSelectionChange);
-
     this.open = true;
     this.onOpen && this.onOpen();
   }
@@ -11963,6 +11961,16 @@ class TextAreaEmoji extends module_textarea_emoji_Module {
     if (elementExists) {
       elementExists.remove();
     } else {
+      if (document.getElementById('emoji-close-div') === null) {
+        let closeDiv = document.createElement('div');
+        closeDiv.id = 'emoji-close-div';
+        closeDiv.addEventListener("click", module_textarea_emoji_fn_close, false);
+        // TOBY - append the closeDiv to the quill container rather than the body
+        // to avoid clashes with other 'fixed' elements.
+        this.quill.container.appendChild(closeDiv);
+      } else {
+        document.getElementById('emoji-close-div').style.display = "block";
+      }
       let ele_emoji_area = document.createElement('div');
       ele_emoji_area.id = 'textarea-emoji';
       this.quill.container.appendChild(ele_emoji_area);
@@ -12004,14 +12012,6 @@ class TextAreaEmoji extends module_textarea_emoji_Module {
       }];
       let tabElementHolder = document.createElement('ul');
       tabToolbar.appendChild(tabElementHolder);
-      if (document.getElementById('emoji-close-div') === null) {
-        let closeDiv = document.createElement('div');
-        closeDiv.id = 'emoji-close-div';
-        closeDiv.addEventListener("click", module_textarea_emoji_fn_close, false);
-        document.getElementsByTagName('body')[0].appendChild(closeDiv);
-      } else {
-        document.getElementById('emoji-close-div').style.display = "block";
-      }
       let panel = document.createElement('div');
       panel.id = "tab-panel";
       ele_emoji_area.appendChild(panel);
@@ -12079,12 +12079,12 @@ function module_textarea_emoji_fn_emojiElementsToPanel(type, panel, quill) {
   };
   let fuse = new Fuse(emoji_list, fuseOptions);
   let result = fuse.search(type);
-  results = result.map(r => r.item).sort(function (a, b) {
+  let results = result.map(r => r.item).sort(function (a, b) {
     return a.emoji_order - b.emoji_order;
   });
   quill.focus();
   let range = fn_updateRange(quill);
-  result.map(function (emoji) {
+  results.map(function (emoji) {
     let span = document.createElement('span');
     let t = document.createTextNode(emoji.shortname);
     span.appendChild(t);
