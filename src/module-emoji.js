@@ -128,10 +128,13 @@ class ShortNameEmoji extends Module {
     try {
       if (event) {
         if (event.key === "Enter" || event.keyCode === 13) {
-          event.preventDefault();
-          event.stopPropagation();
-          this.close(emojis[0], 1);
-          this.container.style.display = "none";
+          // TOBY - if enter is pressed before any emoji is selected,
+          // assume the first emoji is selected.
+          this.buttons[0].focus();
+          setTimeout(() => {
+            this.quill.enable();
+            this.close(emojis[0]);
+          }, 50);
           return;
         }
         else if (event.key === 'Tab' || event.keyCode === 9) {
