@@ -23,7 +23,7 @@
 .completions > li > button {
   box-sizing: border-box;
   height: 2em;
-  padding: .25em .5em;
+  padding: 0.25em 0.5em;
   margin: 0;
   display: block;
   width: 100%;
@@ -66,12 +66,10 @@
   display: flex;
   flex-flow: column;
 }
-
 .emoji_completions li {
   margin: 2px 0;
   padding: 0;
 }
-
 .emoji_completions li:not(:last-of-type) {
   margin-right: 3px;
 }
@@ -155,7 +153,6 @@
   padding: 0px;
   display: flex;
 }
-
 #tab-toolbar ul li {
   padding: 5px;
   display: flex;
@@ -209,11 +206,11 @@ button.ql-contain::after {
   content: "WRAP";
 }
 
-button.ql-table[value="append-row"]::after {
+button.ql-table[value=append-row]::after {
   content: "ROWS+";
 }
 
-button.ql-table[value="append-col"]::after {
+button.ql-table[value=append-col]::after {
   content: "COLS+";
 }
 
@@ -254,7 +251,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-activity {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -262,7 +259,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-flags {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -270,7 +267,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-food {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -278,7 +275,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-nature {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -286,7 +283,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-objects {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -294,7 +291,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-people {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -302,7 +299,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-symbols {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -310,7 +307,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .i-travel {
-  content: '';
+  content: "";
   height: 25px;
   width: 25px;
   margin: auto;
@@ -347,167 +344,167 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-copyright {
-  background-position: -0px -0px;
+  background-position: 0px 0px;
 }
 
 .ap-registered {
-  background-position: -0px -20px;
+  background-position: 0px -20px;
 }
 
 .ap-bangbang {
-  background-position: -0px -40px;
+  background-position: 0px -40px;
 }
 
 .ap-interrobang {
-  background-position: -0px -60px;
+  background-position: 0px -60px;
 }
 
 .ap-tm {
-  background-position: -0px -80px;
+  background-position: 0px -80px;
 }
 
 .ap-information_source {
-  background-position: -0px -100px;
+  background-position: 0px -100px;
 }
 
 .ap-left_right_arrow {
-  background-position: -0px -120px;
+  background-position: 0px -120px;
 }
 
 .ap-arrow_up_down {
-  background-position: -0px -140px;
+  background-position: 0px -140px;
 }
 
 .ap-arrow_upper_left {
-  background-position: -0px -160px;
+  background-position: 0px -160px;
 }
 
 .ap-arrow_upper_right {
-  background-position: -0px -180px;
+  background-position: 0px -180px;
 }
 
 .ap-arrow_lower_right {
-  background-position: -0px -200px;
+  background-position: 0px -200px;
 }
 
 .ap-arrow_lower_left {
-  background-position: -0px -220px;
+  background-position: 0px -220px;
 }
 
 .ap-leftwards_arrow_with_hook {
-  background-position: -0px -240px;
+  background-position: 0px -240px;
 }
 
 .ap-arrow_right_hook {
-  background-position: -0px -260px;
+  background-position: 0px -260px;
 }
 
 .ap-watch {
-  background-position: -0px -280px;
+  background-position: 0px -280px;
 }
 
 .ap-hourglass {
-  background-position: -0px -300px;
+  background-position: 0px -300px;
 }
 
 .ap-keyboard {
-  background-position: -0px -320px;
+  background-position: 0px -320px;
 }
 
 .ap-fast_forward {
-  background-position: -0px -360px;
+  background-position: 0px -360px;
 }
 
 .ap-rewind {
-  background-position: -0px -380px;
+  background-position: 0px -380px;
 }
 
 .ap-arrow_double_up {
-  background-position: -0px -400px;
+  background-position: 0px -400px;
 }
 
 .ap-arrow_double_down {
-  background-position: -0px -420px;
+  background-position: 0px -420px;
 }
 
 .ap-black_right_pointing_double_triangle_with_vertical_bar {
-  background-position: -0px -440px;
+  background-position: 0px -440px;
 }
 
 .ap-black_left_pointing_double_triangle_with_vertical_bar {
-  background-position: -0px -460px;
+  background-position: 0px -460px;
 }
 
 .ap-black_right_pointing_triangle_with_double_vertical_bar {
-  background-position: -0px -480px;
+  background-position: 0px -480px;
 }
 
 .ap-alarm_clock {
-  background-position: -0px -500px;
+  background-position: 0px -500px;
 }
 
 .ap-stopwatch {
-  background-position: -0px -520px;
+  background-position: 0px -520px;
 }
 
 .ap-timer_clock {
-  background-position: -0px -540px;
+  background-position: 0px -540px;
 }
 
 .ap-hourglass_flowing_sand {
-  background-position: -0px -560px;
+  background-position: 0px -560px;
 }
 
 .ap-double_vertical_bar {
-  background-position: -0px -580px;
+  background-position: 0px -580px;
 }
 
 .ap-black_square_for_stop {
-  background-position: -0px -600px;
+  background-position: 0px -600px;
 }
 
 .ap-black_circle_for_record {
-  background-position: -0px -620px;
+  background-position: 0px -620px;
 }
 
 .ap-m {
-  background-position: -0px -640px;
+  background-position: 0px -640px;
 }
 
 .ap-black_small_square {
-  background-position: -0px -660px;
+  background-position: 0px -660px;
 }
 
 .ap-white_small_square {
-  background-position: -0px -680px;
+  background-position: 0px -680px;
 }
 
 .ap-arrow_forward {
-  background-position: -0px -700px;
+  background-position: 0px -700px;
 }
 
 .ap-arrow_backward {
-  background-position: -0px -720px;
+  background-position: 0px -720px;
 }
 
 .ap-white_medium_square {
-  background-position: -0px -740px;
+  background-position: 0px -740px;
 }
 
 .ap-black_medium_square {
-  background-position: -0px -760px;
+  background-position: 0px -760px;
 }
 
 .ap-white_medium_small_square {
-  background-position: -0px -780px;
+  background-position: 0px -780px;
 }
 
 .ap-black_medium_small_square {
-  background-position: -0px -800px;
+  background-position: 0px -800px;
 }
 
 .ap-sunny {
-  background-position: -20px -0px;
+  background-position: -20px 0px;
 }
 
 .ap-cloud {
@@ -651,7 +648,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-diamonds {
-  background-position: -40px -0px;
+  background-position: -40px 0px;
 }
 
 .ap-hotsprings {
@@ -880,7 +877,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-eight_pointed_black_star {
-  background-position: -80px -0px;
+  background-position: -80px 0px;
 }
 
 .ap-snowflake {
@@ -1044,7 +1041,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-new {
-  background-position: -100px -0px;
+  background-position: -100px 0px;
 }
 
 .ap-ng {
@@ -1208,7 +1205,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-moon {
-  background-position: -120px -0px;
+  background-position: -120px 0px;
 }
 
 .ap-full_moon {
@@ -1372,7 +1369,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-herb {
-  background-position: -140px -0px;
+  background-position: -140px 0px;
 }
 
 .ap-four_leaf_clover {
@@ -1536,7 +1533,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-ice_cream {
-  background-position: -160px -0px;
+  background-position: -160px 0px;
 }
 
 .ap-doughnut {
@@ -1680,7 +1677,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-crossed_flags {
-  background-position: -180px -0px;
+  background-position: -180px 0px;
 }
 
 .ap-bamboo {
@@ -1844,7 +1841,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-trumpet {
-  background-position: -200px -0px;
+  background-position: -200px 0px;
 }
 
 .ap-violin {
@@ -1928,7 +1925,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-cricket_bat_and_ball {
-  background-position: -220px -0px;
+  background-position: -220px 0px;
 }
 
 .ap-volleyball {
@@ -2092,7 +2089,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-skin-tone-2 {
-  background-position: -240px -0px;
+  background-position: -240px 0px;
 }
 
 .ap-skin-tone-3 {
@@ -2256,7 +2253,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-baby_chick {
-  background-position: -260px -0px;
+  background-position: -260px 0px;
 }
 
 .ap-hatched_chick {
@@ -2488,7 +2485,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-mans_shoe {
-  background-position: -320px -0px;
+  background-position: -320px 0px;
 }
 
 .ap-athletic_shoe {
@@ -2724,7 +2721,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-blue_heart {
-  background-position: -400px -0px;
+  background-position: -400px 0px;
 }
 
 .ap-green_heart {
@@ -2868,7 +2865,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-minidisc {
-  background-position: -420px -0px;
+  background-position: -420px 0px;
 }
 
 .ap-floppy_disk {
@@ -3032,7 +3029,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-package {
-  background-position: -440px -0px;
+  background-position: -440px 0px;
 }
 
 .ap-e-mail {
@@ -3196,7 +3193,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-closed_lock_with_key {
-  background-position: -460px -0px;
+  background-position: -460px 0px;
 }
 
 .ap-key {
@@ -3360,7 +3357,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-small_blue_diamond {
-  background-position: -480px -0px;
+  background-position: -480px 0px;
 }
 
 .ap-small_red_triangle {
@@ -3608,7 +3605,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-spiral_calendar_pad {
-  background-position: -520px -0px;
+  background-position: -520px 0px;
 }
 
 .ap-compression {
@@ -3772,7 +3769,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-kissing_closed_eyes {
-  background-position: -540px -0px;
+  background-position: -540px 0px;
 }
 
 .ap-stuck_out_tongue {
@@ -3936,7 +3933,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-upside_down_face {
-  background-position: -560px -0px;
+  background-position: -560px 0px;
 }
 
 .ap-face_with_rolling_eyes {
@@ -3980,7 +3977,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-person_with_pouting_face {
-  background-position: -580px -0px;
+  background-position: -580px 0px;
 }
 
 .ap-pray {
@@ -4104,7 +4101,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-monorail {
-  background-position: -600px -0px;
+  background-position: -600px 0px;
 }
 
 .ap-mountain_railway {
@@ -4332,7 +4329,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-passenger_ship {
-  background-position: -640px -0px;
+  background-position: -640px 0px;
 }
 
 .ap-zipper_mouth_face {
@@ -4476,7 +4473,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-ao {
-  background-position: -660px -0px;
+  background-position: -660px 0px;
 }
 
 .ap-flag-aq {
@@ -4640,7 +4637,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-co {
-  background-position: -680px -0px;
+  background-position: -680px 0px;
 }
 
 .ap-flag-cp {
@@ -4804,7 +4801,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-gn {
-  background-position: -700px -0px;
+  background-position: -700px 0px;
 }
 
 .ap-flag-gp {
@@ -4968,7 +4965,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-la {
-  background-position: -720px -0px;
+  background-position: -720px 0px;
 }
 
 .ap-flag-lb {
@@ -5132,7 +5129,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-no {
-  background-position: -740px -0px;
+  background-position: -740px 0px;
 }
 
 .ap-flag-np {
@@ -5296,7 +5293,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-ss {
-  background-position: -760px -0px;
+  background-position: -760px 0px;
 }
 
 .ap-flag-st {
@@ -5460,7 +5457,7 @@ button.ql-table[value="append-col"]::after {
 }
 
 .ap-flag-za {
-  background-position: -780px -0px;
+  background-position: -780px 0px;
 }
 
 .ap-flag-zm {
@@ -5542,4 +5539,3 @@ button.ql-table[value="append-col"]::after {
 .ap-woman-kiss-woman {
   background-position: -780px -400px;
 }
-
